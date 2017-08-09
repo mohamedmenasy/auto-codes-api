@@ -15,7 +15,7 @@ const capitalize = (string) => {
 
 const getSections = ($page: cheerio.Static): Object => {
     const sections = {};
-    $page('.desc').each((index, element) => {
+    $page('.code').each((index, element) => {
         const $element = $page(element);
         sections[$element.text()] = $element.next().text().trim();
     });
